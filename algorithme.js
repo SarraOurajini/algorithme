@@ -1,13 +1,15 @@
 let nombre = prompt("saisir un nombre <= 25");
-let arr = [];
-if (nombre <= 25) {
-  for (i = 0; i <= nombre; i++) {
-    for (let j = 0; j < i; j++) {
-      arr.push("#");
+let str="";
+if (nombre <=25) {
+  for (i = 1; i <= nombre; i++) {
+    for (let k = 1; k < nombre-i ; k++) {
+      str+=" "
     }
-    for (let k = nombre; k >= 0; k--) {
-      arr.push("g");
+    for (let j = 1; j <= i; j++) {
+      str+="# ";
     }
-    console.log(arr.join(" "));
+    str+="\n"
+   
   }
+  console.log(str);
 }
